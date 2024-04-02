@@ -17,12 +17,6 @@ jobs:
 
       - name: Create release
         uses: softprops/action-gh-release@v2
-        with:
-          files: |
-            ./index.d.ts
-            ./package.json
-            ./LICENSE
-            ./README.md
 
   publish-npm:
     name: Publish to NPM
