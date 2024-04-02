@@ -12,22 +12,22 @@ export type ArgumentValue = string | boolean | number | Date | null;
 
 export type ArgumentRef = { type: 'field'; ref: FieldName };
 
-export type ExpressionDefine =
-  | BinaryExpressionDefine
-  | OrExpressionDefine
-  | AndExpressionDefine
-  | NotExpressionDefine;
+export type ExpressionDefinition =
+  | BinaryExpressionDefinition
+  | OrExpressionDefinition
+  | AndExpressionDefinition
+  | NotExpressionDefinition;
 
-export type BinaryExpressionDefine = [FieldName, Operation, FieldValue];
+export type BinaryExpressionDefinition = [FieldName, Operation, FieldValue];
 
-export type OrExpressionDefine = {
-  or: Array<ExpressionDefine>;
+export type OrExpressionDefinition = {
+  or: Array<ExpressionDefinition>;
 };
 
-export type AndExpressionDefine = {
-  and: Array<ExpressionDefine>;
+export type AndExpressionDefinition = {
+  and: Array<ExpressionDefinition>;
 };
 
-export type NotExpressionDefine = {
-  not: ExpressionDefine;
+export type NotExpressionDefinition = {
+  not: ExpressionDefinition;
 };
