@@ -2,8 +2,8 @@ name: Publish
 
 on:
   push:
-    # tags:
-    #   - 'v*.*.*'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   setup:
@@ -23,9 +23,9 @@ jobs:
       - name: Build
         run: npm ci
 
-      # - name: Create release
-      #   continue-on-error: true
-      #   uses: softprops/action-gh-release@v2
+      - name: Create release
+        continue-on-error: true
+        uses: softprops/action-gh-release@v2
 
       - name: Set up NPM
         uses: actions/setup-node@v4
