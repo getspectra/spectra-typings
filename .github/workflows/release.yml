@@ -32,11 +32,11 @@ jobs:
         with:
           registry-url: 'https://registry.npmjs.org'
 
-      # - name: Publish to NPM
-      #   continue-on-error: true
-      #   run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.TYPINGS_NPM_TOKEN }}
+      - name: Publish to NPM
+        continue-on-error: true
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.TYPINGS_NPM_TOKEN }}
 
       - name: Set up GPR
         uses: actions/setup-node@v4
