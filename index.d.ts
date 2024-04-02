@@ -4,11 +4,11 @@ export type ArrayOperation = 'in' | 'nin' | 'not_in';
 
 export type Operation = NumberOperation | ArrayOperation;
 
-export type FieldName = `${string}.${string}`;
+export type FieldName = string;
 
 export type FieldValue = ArgumentValue | ArgumentRef;
 
-export type ArgumentValue = string | boolean | number | Date | null;
+export type ArgumentValue = string | boolean | number | Date | null | Array<any>;
 
 export type ArgumentRef = { type: 'field'; ref: FieldName };
 
