@@ -7,6 +7,7 @@ on:
 
 jobs:
   setup:
+    name: Setup
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,10 +19,10 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            index.d.ts
-            package.json
-            LICENSE
-            README.md
+            ./index.d.ts
+            ./package.json
+            ./LICENSE
+            ./README.md
 
   publish-npm:
     name: Publish to NPM
