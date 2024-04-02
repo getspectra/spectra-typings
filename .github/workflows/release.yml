@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      packages: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -23,6 +24,7 @@ jobs:
         run: npm ci
 
       # - name: Create release
+      #   continue-on-error: true
       #   uses: softprops/action-gh-release@v2
 
       - name: Set up NPM
@@ -30,10 +32,11 @@ jobs:
         with:
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish to NPM
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.TYPINGS_NPM_TOKEN }}
+      # - name: Publish to NPM
+      #   continue-on-error: true
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.TYPINGS_NPM_TOKEN }}
 
       - name: Set up GPR
         uses: actions/setup-node@v4
