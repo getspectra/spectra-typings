@@ -1,6 +1,6 @@
 {
   "name": "@getspectra/spectra-typings",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/getspectra/spectra-typings"
   },
-  "description": "Type definitions for @getspectra/spectra-js and @getspectra/spectra-components",
+  "description": "Type definitions for @getspectra/spectra-js and @getspectra/spectra-components.",
   "keywords": [
     "spectra"
   ],
