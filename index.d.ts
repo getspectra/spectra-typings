@@ -6,11 +6,9 @@ export type Operation = NumberOperation | ArrayOperation;
 
 export type FieldName = string;
 
-export type FieldValue = ArgumentValue | ArgumentRef;
+export type RefValue = {ref: FieldName}
 
-export type ArgumentValue = string | boolean | number | Date | null | Array<any>;
-
-export type ArgumentRef = { type: 'field'; ref: FieldName };
+export type Value = string | boolean | number | Date | null | Array<any> | RefValue;
 
 export type ExpressionDefinition =
   | BinaryExpressionDefinition
